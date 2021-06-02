@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
-ActiveRecord::Schema.define(version: 0) do
 
-=======
 ActiveRecord::Schema.define(version: 2021_06_01_101620) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -50,5 +47,4 @@ ActiveRecord::Schema.define(version: 2021_06_01_101620) do
   end
 
   add_foreign_key "items", "users"
->>>>>>> Stashed changes
 end

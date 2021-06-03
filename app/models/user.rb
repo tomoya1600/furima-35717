@@ -15,6 +15,6 @@ class User < ApplicationRecord
     end
     validates :nickname
     validates :birthday
-    validates :encrypted_password, length: { minimum: 6 }
+    validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ }
   end
 end

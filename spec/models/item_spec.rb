@@ -23,53 +23,33 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Text can't be blank")
       end
-      it 'category_idが空では出品できない' do
-        @item.category_id = ''
-        @item.valid?
-        expect(@item.errors.full_messages).to include("Category can't be blank")
-      end
+      
       it 'category_idに1が選択されている場合は出品できない' do
         @item.category_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Category must be other than 1")
       end
-      it 'status_idが空では出品できない' do
-        @item.status_id = ''
-        @item.valid?
-        expect(@item.errors.full_messages).to include("Status can't be blank")
-      end
+      
       it 'status_idに1が選択されている場合は出品できない' do
         @item.status_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Status must be other than 1")
       end
-      it 'shipping_fee_idが空では出品できない' do
-        @item.shipping_fee_id = ''
-        @item.valid?
-        expect(@item.errors.full_messages).to include("Shipping fee can't be blank")
-      end
+      
       it 'shipping_fee_idに1が選択されている場合は出品できない' do
         @item.shipping_fee_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipping fee must be other than 1")
       end
-      it 'prefecture_idが空では出品できない' do
-        @item.prefecture_id = ''
-        @item.valid?
-        expect(@item.errors.full_messages).to include("Prefecture can't be blank")
-      end
+      
       it 'prefecture_idに1が選択されている場合は出品できない' do
         @item.prefecture_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Prefecture must be other than 1")
       end
-      it 'scheduled_idが空では出品できない' do
-        @item.scheduled_id
-        @item.valid?
-        expect(@item.errors.full_messages).to include("Scheduled can't be blank")
-      end
+      
       it 'scheduled_idに1が選択されている場合は出品できない' do
-        @item.scheduled_id
+        @item.scheduled_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Scheduled must be other than 1")
       end

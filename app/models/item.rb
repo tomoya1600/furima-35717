@@ -10,7 +10,7 @@ class Item < ApplicationRecord
   has_one :order
   has_one_attached :image
 
-  with_options numericality: { other_than: 1 } do
+  with_options numericality: { other_than: 1, message: "を選択してください"} do
     validates :category_id
     validates :status_id
     validates :shipping_fee_id
